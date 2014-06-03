@@ -3,18 +3,13 @@
 ```php
 $getTopK = function ($rows, $key, $k, $map_cb = null) {
     $ret = array();
-    $r = array();
-    foreach ($rows as $value) {
-        $v = $value[$key];
+    foreach ($rows as $row) {
+        $v = $row[$key];
         if (count($ret) < $k) {
-            $ret[] = $value;
-            $r = $v;
-        } elseif ($v > min($r)) {
-            $ret[] = $value;
-            $r = $v;
-            rsort($r);
+            $ret[] = $row;
+        } elseif ($v > $ret[$k-1][$key]) {
+            $ret[] = $row;
             usort($ret, function($a, $b){return $a[$key] > $b[$key] ? -1 : 1;});
-            array_pop($r);
             array_pop($ret);
         }
     }
