@@ -1,0 +1,15 @@
+`\webui\gxt\protected\components\ReportComponent.php`
+```php
+$userTaskIDs = '';
+foreach ($result as $value) {
+    if (!empty($userTaskIDs)) {
+        $userTaskIDs .= ',';
+    }
+    $userTaskIDs .= intval($value['user_task_id']);
+}
+```
+should be 
+```php
+$userTaskIDsArray = array_map(function($e){return intval($e['user_task_id']);}, $result);
+$userTaskIDs = implode(',', $userTaskIDsArray);
+```
