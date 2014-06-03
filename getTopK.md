@@ -23,7 +23,9 @@ $map_cb = function ($e) {
     );
 };
 foreach (Yii::app()->params['industory'] as $key => $value) {
-    $industoryHosts = array_filter($result, function($e)use($key){return in_array($key, $hostArr[$e['host_id']]);});
+    $industoryHosts = array_filter($result, function ($e) use ($key, $hostArr) {
+        return in_array($key, $hostArr[$e['host_id']]);
+    });
     $top5[$key] = $getTopK($industoryHosts, 'total_time', 5, $map_cb);
 }
 ```
