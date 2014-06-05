@@ -1,4 +1,4 @@
-`\webui\gxt\protected\models\SecurityVuls.php`
+`\models\SecurityVuls.php`
 
 ```php
 public static function getTable(){
