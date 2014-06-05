@@ -1,4 +1,4 @@
-`\webui\gxt\protected\models\Alerts.php`
+`\models\Alerts.php`
 ```php
 $tmpIDIndex = array();
 foreach ($ret as $value) {
@@ -11,7 +11,7 @@ foreach ($tmpIDs as $id) {
     }
 }
 ```
-
+should be
 ```php
 $tmpMessageIds = array_map(function($e){return $e['message_id'];}, $ret);
 $leftIDs = array_diff($tmpIDs, $tmpMessageIds);
