@@ -1,4 +1,4 @@
-`\webui\gxt\protected\components\ReportComponent.php`
+`\components\ReportComponent.php`
 ```php
 $normalData   = array();
 $abnormalData = array();
