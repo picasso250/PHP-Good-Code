@@ -1,4 +1,4 @@
-`ReportComponent::computeTopPerfHost()`
+
 
 ```php
 $getTopK = function ($rows, $key, $k, $map_cb = null) {
