@@ -1,4 +1,4 @@
-`\components\ReportComponent.php`
+
 ```php
 $normalData   = array();
 $abnormalData = array();
