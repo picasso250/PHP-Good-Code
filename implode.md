@@ -1,4 +1,4 @@
-`\webui\gxt\protected\components\ReportComponent.php`
+
 ```php
 $userTaskIDs = '';
 foreach ($result as $value) {
