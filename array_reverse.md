@@ -1,4 +1,4 @@
-`\webui\gxt\protected\components\ReportComponent.php`
+
 ```php
 $ret = array();
 foreach ($induArr as $Indu => $tmpIndu) {
