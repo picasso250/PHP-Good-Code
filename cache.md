@@ -1,4 +1,4 @@
-`\models\SecurityVuls.php`
+
 
 ```php
 public static function getTable(){
